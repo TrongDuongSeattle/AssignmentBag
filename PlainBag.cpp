@@ -36,7 +36,7 @@ template <typename T>
 int PlainBag<T>::itemCount(T value) {
     int count = 0;
     for (int i = 0; i < m_size; i++) {
-        if (hasItem(value)) {
+        if(m_data[i] == value)  {
             count++;
         }
     }
@@ -45,12 +45,7 @@ int PlainBag<T>::itemCount(T value) {
 
 template <typename T>
 bool PlainBag<T>::hasItem(T value) {
-    for (int i = 0; i < m_size; i++) {
-        if (m_data[i] == value) {
-            return true;
-        }
-    }
-    return false;
+    return itemCount(value);
 }
 
 template <typename T>

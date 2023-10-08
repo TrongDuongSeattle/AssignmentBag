@@ -14,7 +14,7 @@ void testBag(BagInterface<T>& bag) {
     }
     bag.print();
     cout << "\nNumber of items:" << bag.size();
-    cout << "\nNumber of ones:" << bag.itemCount(item1);
+    cout << "\nNumber of ones:" << bag.itemCount(item1)<<std::endl;
     bag.remove(item1);
     bag.print();
     cout << "\nNumber of items:" << bag.size();
@@ -49,4 +49,9 @@ Bag content:
 Number of items:0
 Number of ones:0
 Bag content:4 2 4 6 5 4 4 1 3 2 2 3 3 2 3 4 2 2 4 4
+Bag content:4 2 4 6 5 4 4 3 2 2 3 3 2 3 4 2 2 4 4
+Number of items:19
+Number of ones:0
+Number of twos:6
 */
+
