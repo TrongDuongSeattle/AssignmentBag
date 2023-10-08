@@ -48,6 +48,7 @@ bool MagicChangeBag<T>::remove(T value) {
  * @tparam T generic type
  * @param value the item to be counted
  * @return number of instances of item in MagicChangeBag
+ *         if bag is full, will return 0
  */
 template <typename T>
 int MagicChangeBag<T>::itemCount(T value) {
@@ -85,22 +86,36 @@ int MagicChangeBag<T>::size() {
     }
     return m_size;
 }
-
+/**
+ * Empties the MagicChangeBag
+ * @tparam T generic type
+ */
 template <typename T>
 void MagicChangeBag<T>::clear() {
     m_size = 0;
 }
-
+/**
+ * Checks if MagicChangeBag is empty
+ * @tparam T generic type
+ * @return True if bag is empty, false otherwise.
+ */
 template <typename T>
 bool MagicChangeBag<T>::isEmpty() {
     return m_size == 0;
 }
-
+/**
+ * Checks if MagicChangeBag is full
+ * @tparam T generic type
+ * @return true if MagicChangeBag is full, false otherwise
+ */
 template <typename T>
 bool MagicChangeBag<T>::isFull() {
     return m_capacity == m_size + 1;
 }
-
+/**
+ * Prints out bag contents, if bag is full, an empty bag is printed
+ * @tparam T generic type
+ */
 template <typename T>
 void MagicChangeBag<T>::print() {
     std::cout << "Bag contents: ";
@@ -110,7 +125,10 @@ void MagicChangeBag<T>::print() {
         }
     }
 }
-
+/**
+ * Increases size of MagicBag
+ * @tparam T generic type
+ */
 template<typename T>
 void MagicChangeBag<T>::resize() {
     T* temp = new T[m_capacity * 2];
@@ -121,12 +139,16 @@ void MagicChangeBag<T>::resize() {
     delete[] m_data;
     m_data = temp;
 }
-
+/**
+ * Removes the item at given index from MagicChangeBag
+ * @tparam T
+ * @param index Index of item to be removed
+ */
 template <typename T>
-void MagicChangeBag<T>::removeByIndex(int num) {
-    for (int i = num; i < m_size; i++) {
+void MagicChangeBag<T>::removeByIndex(int index) {
+    for (int i = index; i < m_size; i++) {
         m_data[i] = m_data[i+1];
     }
     m_size--;
 }
-template class MagicChangeBag<int>;
+template class MagicChangeBag<int>; //forces compiler to instantiate MagicBag of generic type int

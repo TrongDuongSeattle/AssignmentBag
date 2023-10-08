@@ -8,7 +8,7 @@
 #include "BagInterface.h"
 
 template<typename T>
-class PlainBag : public  BagInterface<T> {
+class PlainBag : public BagInterface<T> {
 public:
     PlainBag();
     void insert(T);

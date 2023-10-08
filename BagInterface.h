@@ -10,7 +10,6 @@
 template <typename T>
 class BagInterface {
 public:
-
     virtual void insert(T) = 0;
     virtual bool remove(T) = 0;
     virtual int itemCount(T) = 0;
