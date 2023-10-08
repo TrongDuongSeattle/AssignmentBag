@@ -29,7 +29,7 @@ bool MagicChangeBag<T>::remove(T value) {
         }
         num++;
     }
-    return -1;
+    return false;
 }
 
 template <typename T>
@@ -45,17 +45,23 @@ int MagicChangeBag<T>::itemCount(T value) {
 
 template <typename T>
 bool MagicChangeBag<T>::hasItem(T value) {
+    /*
     for (int i = 0; i < m_size; i++) {
         if (m_data[i] == value) {
             return true;
         }
     }
     return false;
+     */
+    return itemCount(value);
 }
 
 template <typename T>
 int MagicChangeBag<T>::size() {
-    return 0;
+    if (m_size == 20) {
+        return 0;
+    }
+    return m_size;
 }
 
 template <typename T>

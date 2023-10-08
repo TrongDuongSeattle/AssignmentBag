@@ -40,7 +40,6 @@ int PlainBag<T>::itemCount(T value) {
             count++;
         }
     }
-    std::cout << "the fuck" << std::endl;
     return count;
 }
 
