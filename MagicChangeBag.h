@@ -2,8 +2,8 @@
 // Created by Leafylotus on 10/7/2023.
 //
 
-#ifndef ASSBAG_MAGICCHANGEBAG_H
-#define ASSBAG_MAGICCHANGEBAG_H
+#ifndef ASSIGNMENTBAG_MAGICCHANGEBAG_H
+#define ASSIGNMENTBAG_MAGICCHANGEBAG_H
 
 #include "BagInterface.h"
 
@@ -31,4 +31,4 @@ private:
 
 
 
-#endif //ASSBAG_MAGICCHANGEBAG_H
+#endif //ASSIGNMENTBAG_MAGICCHANGEBAG_H

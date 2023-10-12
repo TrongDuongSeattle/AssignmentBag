@@ -2,8 +2,8 @@
 // Created by Leafylotus on 10/7/2023.
 //
 
-#ifndef ASSBAG_PLAINBAG_H
-#define ASSBAG_PLAINBAG_H
+#ifndef ASSIGNMENTBAG_PLAINBAG_H
+#define ASSIGNMENTBAG_PLAINBAG_H
 
 #include "BagInterface.h"
 
@@ -30,4 +30,4 @@ private:
 };
 
 
-#endif //ASSBAG_PLAINBAG_H
+#endif //ASSIGNMENTBAG_PLAINBAG_H
